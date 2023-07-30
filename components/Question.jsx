@@ -64,7 +64,7 @@ export function Question({
             <img src={questionIlustration.src} alt="Question ilustration" className="w-[120px] sm:w-[162px] absolute -right-[3px] -top-[60px] sm:-top-20" />
 
             <section className="font-bold text-lg xs:text-2xl text-[#2F527B] flex flex-col items-start pb-8">
-                {question?.flag && <img src={question?.flag} alt={question?.name} className="w-[75px] xs:w-[84px] rounded mb-7"/>}
+                {question?.flag && <img src={question?.flag} alt={question?.name} className="w-[75px] xs:w-[84px] rounded mb-7 border-[1px] border-[#3F3D56]"/>}
                 <p>{question?.text}</p>
             </section>
 
