@@ -5,8 +5,10 @@ import { getAllCountries } from "@/api/endpoints/countriesEndpoints";
 import { generateQuestions } from "@/utils/questions.util";
 import { Question } from "@/components/Question.jsx";
 import { Result } from "@/components/Result.jsx";
+import { ImSpinner2 } from "react-icons/im";
 
 export function Game() {
+    // State to save if the information has been loaded
     const [isLoading, setIsLoading] = useState(true);
     // State to save the countries
     const [countries, setCountries] = useState([]);
@@ -44,7 +46,9 @@ export function Game() {
     return (
         <section className="w-full flex flex-col justify-center items-center">
 
-            {isLoading && <p>Loading...</p>}
+            {isLoading && <figure className="text-7xl absolute">
+                    <ImSpinner2 className="fill-[#3F3D56] animate-spin" />
+                </figure>}
 
             {!isLoading && !gameCompleted && (
                 <Question
